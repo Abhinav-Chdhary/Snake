@@ -4,13 +4,13 @@ using UnityEngine;
 public class Snake : MonoBehaviour
 {
     private Vector2 direction = Vector2.right;
-    private List<Transform> _segments;
+    private List<Transform> _segments = new List<Transform>();
     public Transform _segmentPrefab;
+    public int initialSize = 3;
 
     private void Start()
     {
-        _segments = new List<Transform>();
-        _segments.Add(transform);
+        ResetGame();
     }
     private void Update()
     {
@@ -59,6 +59,10 @@ public class Snake : MonoBehaviour
 
         _segments.Clear();
         _segments.Add(transform);
+        for(int i = 1; i < initialSize; i++)
+        {
+            _segments.Add(Instantiate(_segmentPrefab));
+        }
         transform.position = Vector3.zero;
     }
     private void OnTriggerEnter2D(Collider2D collision)
