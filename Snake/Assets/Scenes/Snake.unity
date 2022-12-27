@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 460254580}
   - component: {fileID: 460254579}
   - component: {fileID: 460254581}
+  - component: {fileID: 460254582}
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -345,6 +346,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
+--- !u!114 &460254582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460254578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613b9e9977b583341b54a12d1a377af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridArea: {fileID: 802996350}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +849,7 @@ GameObject:
   - component: {fileID: 1839596788}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -966,3 +980,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa329d41681566141ae07f22a36f03e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _segmentPrefab: {fileID: 8297630032376472403, guid: 1c60b50daf1509b4aa91564381d66317, type: 3}

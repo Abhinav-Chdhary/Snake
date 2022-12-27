@@ -1,8 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
     private Vector2 direction = Vector2.right;
+    private List<Transform> _segments;
+    public Transform _segmentPrefab;
+
+    private void Start()
+    {
+        _segments = new List<Transform>();
+        _segments.Add(transform);
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
