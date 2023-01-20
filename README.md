@@ -1,2 +1,2 @@
 # Snake
-Replicating simple snake Game : )
+Replicating simple snake Game 🐍😉😎
